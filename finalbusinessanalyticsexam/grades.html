@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrends Analytics Report</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #777;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<nav>
+    <ul>
+        <li><a href="#key-insights">Key Insights</a></li>
+        <li><a href="#predictive-models">Predictive Models</a></li>
+        <li><a href="#models">Predictive Models Explained</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<section id="key-insights">
+    <h1>Key Insights from Descriptive Analytics</h1>
+    <p>Here you can include the key findings from your exploratory data analysis (EDA).</p>
+    <ul>
+        <li>Insight 1: Summary statistics showing...</li>
+        <li>Insight 2: Trends identified in customer behavior...</li>
+        <li>Insight 3: Sales trends over time...</li>
+    </ul>
+</section>
+
+<section id="predictive-models">
+    <h2>Performance of Predictive Models</h2>
+    <p>Details on the predictive models used, their accuracy, and key findings.</p>
+    <ul>
+        <li>Model 1: Random Forest achieved X% accuracy...</li>
+        <li>Model 2: Logistic regression highlights...</li>
+        <li>Important features: Age, Purchase Amount...</li>
+    </ul>
+
+    <!-- Interactive Visualizations -->
+    <div id="chart1"></div> <!-- For the first interactive visualization -->
+    <div id="chart2"></div> <!-- For the second interactive visualization -->
+
+</section>
+
+<section id="models">
+    <h1>Predictive Models Explained</h1>
+    <p>This section explains the predictive models used in the analysis:</p>
+    <ul>
+        <li>Random Forest: Description and performance...</li>
+        <li>Logistic Regression: Description and performance...</li>
+        <li>Model implications for TechTrends...</li>
+    </ul>
+</section>
+
+<section id="recommendations">
+    <h1>Recommendations for TechTrends</h1>
+    <p>Based on the analysis, here are actionable recommendations:</p>
+    <ul>
+        <li>Recommendation 1: Increase customer retention by...</li>
+        <li>Recommendation 2: Focus marketing on high-value customers...</li>
+        <li>Recommendation 3: Improve operational efficiency by...</li>
+    </ul>
+</section>
+
+<!-- External JavaScript (Plotly.js for interactive charts) -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- Internal JavaScript -->
+<script>
+    // Sample interactive bar chart
+    var data1 = [{
+        x: ['Feature 1', 'Feature 2', 'Feature 3'],
+        y: [20, 14, 23],
+        type: 'bar'
+    }];
+
+    Plotly.newPlot('chart1', data1);
+
+    // Sample pie chart for model performance
+    var data2 = [{
+        values: [60, 40],
+        labels: ['Correct Predictions', 'Incorrect Predictions'],
+        type: 'pie'
+    }];
+
+    Plotly.newPlot('chart2', data2);
+</script>
+
+</body>
+</html>
